@@ -22,7 +22,7 @@ body {
     justify-content: flex-end;
 }
 
-#header button {
+button {
     background: #E55C00;
     border: 1px solid #CE5100;
     border-radius: 5px;
@@ -33,7 +33,7 @@ body {
     margin-left: auto;
 }
 
-#header button:hover {
+button:hover {
     cursor: pointer;
     background: #FF8905;
     border: 1px solid #E87B09;
@@ -42,9 +42,8 @@ body {
 
 #bookContainer {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    column-gap: 20px;
+    column-gap: 40px;
     row-gap: 30px;
     max-width: 90%;
     margin: 30px auto 0 auto;
@@ -98,4 +97,10 @@ body {
 article p {
     font-size: 0.8rem;
     font-style: italic;
+    color: gray;
+}
+
+article button {
+    width: 100%;
+    margin-top: 10px;
 }
