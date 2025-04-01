@@ -22,20 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
     addBookToLibrary("In Search of Lost Time", "Marcel Proust", 381, 29.99, "https://thegreatestbooks.org/books/225", "https://images.thegreatestbooks.org/myvbhitdua7h1etye2hvfjej2p4j");
     addBookToLibrary("One Hundred Years of Solitude", "Gabriel García Márquez", 837, 49.99, "https://thegreatestbooks.org/books/266", "https://images.thegreatestbooks.org/fzce7ac1jcmx6fi8ppnea65ct3u9")
 
+    addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 842, 49.99, "https://thegreatestbooks.org/books/38", "https://images.thegreatestbooks.org/ymseqoyhkyhpho50rs2jdjmi2gnn");
+    addBookToLibrary("Ulysses", "James Joyce", 1240, 69.99, "https://thegreatestbooks.org/books/122", "https://images.thegreatestbooks.org/sbd37b2dsyuw15cv63l87biw63kv");
+    addBookToLibrary("In Search of Lost Time", "Marcel Proust", 381, 29.99, "https://thegreatestbooks.org/books/225", "https://images.thegreatestbooks.org/myvbhitdua7h1etye2hvfjej2p4j");
+    addBookToLibrary("One Hundred Years of Solitude", "Gabriel García Márquez", 837, 49.99, "https://thegreatestbooks.org/books/266", "https://images.thegreatestbooks.org/fzce7ac1jcmx6fi8ppnea65ct3u9")
+    addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 842, 49.99, "https://thegreatestbooks.org/books/38", "https://images.thegreatestbooks.org/ymseqoyhkyhpho50rs2jdjmi2gnn");
+    addBookToLibrary("Ulysses", "James Joyce", 1240, 69.99, "https://thegreatestbooks.org/books/122", "https://images.thegreatestbooks.org/sbd37b2dsyuw15cv63l87biw63kv");
+
     const displayBooks = () => {
         myLibrary.forEach((book) => {
             let bookCard = `
-                <a href="${book.url}">
                     <article class="bookCard">
-                        <img src="${book.imgurl}" alt="${book.title}">
-                        <h3>${book.title}</h3>
-                        <p>Written by ${book.author}</p>
-                        <div class="bookCard-footer">
-                            <p>${book.pages}</p>
-                            <p>$${book.price}</p>
-                        </div>
+                        <a href="${book.url}">
+                            <div class="imgContainer">
+                                <img src="${book.imgurl}" alt="${book.title}">
+                                <p>$${book.price}</p>
+                            </div>
+                        </a>
+                        <a href="${book.url}">
+                            <h3>${book.title}</h3>
+                        </a>
+                        <p>Author: ${book.author}</p>
+                        <p>Pages: ${book.pages}</p>
                     </article>
-                </a>
             `;
             bookContainer.innerHTML += bookCard;
         })
