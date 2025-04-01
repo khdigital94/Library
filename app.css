@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+#bookContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    padding: 20px;  
+}
+
+.bookCard {
+    border-radius: 5px;
+    width: 200px;
+}
+
+.bookCard img {
+    width: 100%;
+}
+
+.bookCard h3 {
+    margin: 0;
+    padding: 0;
+}
