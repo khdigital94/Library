@@ -19,5 +19,18 @@
 				<div id="bookContainer"></div>
 			</div>
 		</main>
+		<section id="sidebar" class="hide">
+			<h2>Add a new book</h2>
+			<p>Fill out the form below to add a new book to the library</p>
+			<form>
+				<input type="text" name="Title" placeholder="Title" id="bookTitle" required="true" />
+				<input type="text" name="Author" placeholder="Author" id="bookAuthor" required="true" />
+				<input type="number" name="Pages" placeholder="Pages" id="bookPages" required="true" />
+				<input type="number" name="Price" placeholder="Price" id="bookPrice" required="true" />
+				<input type="url" name="Book URL" placeholder="Book URL" id="bookUrl" />
+				<input type="url" name="Book Image URL" placeholder="Book Image URL (optional)" id="bookImgUrl" />
+				<button type="submit" id="submitFormBtn">Submit Book</button>
+			</form>
+		</section>
 	</body>
 </html>
