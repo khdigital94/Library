@@ -23,27 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let myLibrary = [];
 
-	// Constructor for new Books
-	function Book(id, title, author, pages, price, url, imgurl) {
-		this.id = id;
-		this.title = title;
-		this.author = author;
-		this.pages = pages;
-		this.price = price;
-		this.url = url;
-		this.imgurl = imgurl;
+	class Book {
+		#id;
+		constructor(title, author, pages, price, url, imgurl) {
+			this.#id = crypto.randomUUID();
+			this.title = title;
+			this.author = author;
+			this.pages = pages;
+			this.price = price;
+			this.url = url;
+			this.imgurl = imgurl;
+		}
 	}
 
-	// Function to add new books to the library
-	function addBookToLibrary(title, author, pages, price, url, imgurl) {
-		let bookId = crypto.randomUUID();
-		myLibrary.push(new Book(bookId, title, author, pages, price, url, imgurl));
-	}
-
-	addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 842, 49.99, "https://thegreatestbooks.org/books/38", "https://images.thegreatestbooks.org/ymseqoyhkyhpho50rs2jdjmi2gnn");
-	addBookToLibrary("Ulysses", "James Joyce", 1240, 69.99, "https://thegreatestbooks.org/books/122", "https://images.thegreatestbooks.org/sbd37b2dsyuw15cv63l87biw63kv");
-	addBookToLibrary("Lost Time", "Marcel Proust", 381, 29.99, "https://thegreatestbooks.org/books/225", "https://images.thegreatestbooks.org/myvbhitdua7h1etye2hvfjej2p4j");
-	addBookToLibrary("One Hundred Years", "Gabriel García Márquez", 837, 49.99, "https://thegreatestbooks.org/books/266", "https://images.thegreatestbooks.org/fzce7ac1jcmx6fi8ppnea65ct3u9");
+	const book1 = myLibrary.push(new Book("The Great Gatsby", "F. Scott Fitzgerald", 842, 49.99, "https://thegreatestbooks.org/books/38", "https://images.thegreatestbooks.org/ymseqoyhkyhpho50rs2jdjmi2gnn"));
+	const book2 = myLibrary.push(new Book("Ulysses", "James Joyce", 1240, 69.99, "https://thegreatestbooks.org/books/122", "https://images.thegreatestbooks.org/sbd37b2dsyuw15cv63l87biw63kv"));
+	const book3 = myLibrary.push(new Book("Lost Time", "Marcel Proust", 381, 29.99, "https://thegreatestbooks.org/books/225", "https://images.thegreatestbooks.org/myvbhitdua7h1etye2hvfjej2p4j"));
+	const book4 = myLibrary.push(new Book("One Hundred Years", "Gabriel García Márquez", 837, 49.99, "https://thegreatestbooks.org/books/266", "https://images.thegreatestbooks.org/fzce7ac1jcmx6fi8ppnea65ct3u9"));
 
 	const displayBooks = () => {
 		bookContainer.innerHTML = "";
